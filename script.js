@@ -3,17 +3,8 @@ let ciudad ='Londres';
 let difKelvin=273.15;
 let urlBase= 'https://api.openweathermap.org/data/2.5/weather'
 
-/*
-document.querySelector("#botonBusqueda").addEventListener("click", () => {
 
-    const ciudad=document.querySelector("#ciudadEntrada").value
-    if (ciudad){
-        fetchDatosClima(ciudad)
-    }
-})
-*/
-
-// prueba
+// Eventos
 document.querySelector("#botonBusqueda").addEventListener("click",funcionPrueba)
 document.querySelector("#ciudadEntrada").addEventListener("keydown",teclado)
 
@@ -22,8 +13,6 @@ function teclado(e){
     (e.key==="Enter" )
 }
 
-
-
 function funcionPrueba(){
     const ciudad=document.querySelector("#ciudadEntrada").value
     if (ciudad){
@@ -31,12 +20,6 @@ function funcionPrueba(){
     }
 
 }
-//hasta aca
-
-
-
-
-
 
 function fetchDatosClima(ciudad){
     fetch (`${urlBase}?q=${ciudad}&appid=${api_key}`)
